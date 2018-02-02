@@ -19,9 +19,6 @@ app.use(webpackHotMiddleware(compiler, {
 }));
 
 app.get('/*',(req, res) => {
-	if (!req.url.match('static') && !req.url.match('/__webpack_hmr') && !req.url.match('bundle.js')) {
-        req.url = '/'; 
-    }
 	res.sendFile(path.join(__dirname, './index.html'));
 });
 

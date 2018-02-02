@@ -3,7 +3,8 @@ import webpack from 'webpack'
 export default {
 	devtool: 'eval-source-map',
 	entry: [
-		'webpack-hot-middleware/client?path=http://localhost:3000/__webpack_hmr',
+	    'react-hot-loader/patch',
+	    'webpack-hot-middleware/client',
 		path.join(__dirname, '/client/index.js')
 	],
 	output: {
